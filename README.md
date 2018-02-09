@@ -25,7 +25,7 @@ sudo alien -r lantern-installer-64-bit.deb
 sudo yum install rpmrebuild
 sudo rpmrebuild -pe lantern-4.0.1-2.x86_64.rpm
 ```
-## 第六部：替换文件(把里面的内容替换成下面的，大约在中间部位)
+## 第六步：替换文件(把里面的内容替换成下面的，大约在中间部位)
 ```
 (Converted from a deb package by alien version 8.95.)
 %files
@@ -71,10 +71,21 @@ cp /usr/lib/lantern/lantern.sh  ~
 ./lantern.sh  
 ```
 
-第十步：
+## 第十步：
 1.先设置成自动，写入lantern地址栏上的，`http://localhost:39572`  每个人不一样。
 2.启动后会自动设置成下图：
 ![](https://i.imgur.com/EIouJox.jpg)
+
+## 第十一步：设置自启动
+```
+vi /etc/rc.d/rc.local
+
+把/usr/lib/lantern/lantern.sh  
+
+添加进去就可以了，保存退出。
+
+```
+
 
 
 有啥不懂的可以问。着急分享，就不注重细节了，费一天时间还是蛮开心的。喜欢的点歌star。后续慢慢补充完整。
